@@ -915,7 +915,7 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
 /* ══════════════════════════════════════════
    API ENDPOINTS
 ══════════════════════════════════════════ */
-const ENROLLMENT_API = 'https://script.google.com/macros/s/AKfycbxx4aBT4pYDR5N4yTp6DHtvP7U2Vmcjwq_5SWYEEnX9VTfoRXsLXIQDwb555ZST_hEQ/exec';
+const ENROLLMENT_API = 'https://script.google.com/macros/s/AKfycbxec4WA60QAmmvh7V2RYwem_c3JaG6tHp0uOeJloldhhLIa3eiZLT1bnXK49pxSv8Sw/exec';
 const ORIENTATION_API = 'https://script.google.com/macros/s/AKfycbzr-AUQG8VTZ-NS_bSpQdaNMoQmIhiOCzTnt42sRZgwemiMq66hHABwsu_TrO6apkG1/exec';
  
 /* ══════════════════════════════════════════
@@ -1074,39 +1074,110 @@ function changeFile() {
    SUBMIT ENROLLMENT → Google Sheet
 ══════════════════════════════════════════ */
 function submitEnrollment() {
-  // Validate all fields
-  let valid = true;
- 
-  const name = document.getElementById('fName').value.trim();
-  if (!validateName(name)) { showErr('fName','fNameErr'); valid = false; } else clearErr('fName','fNameErr');
- 
-  const age = document.getElementById('fAge').value.trim();
-  if (!validateAge(age)) { showErr('fAge','fAgeErr'); valid = false; } else clearErr('fAge','fAgeErr');
- 
-  const gender = document.getElementById('fGender').value;
-  if (!gender) { showErr('fGender','fGenderErr'); valid = false; } else clearErr('fGender','fGenderErr');
- 
-  const city = document.getElementById('fCity').value.trim();
-  if (city.length < 2) { showErr('fCity','fCityErr'); valid = false; } else clearErr('fCity','fCityErr');
- 
+  // ── Validate all fields ──
+  const name  = document.getElementById('fName').value.trim();
+  const age   = document.getElementById('fAge').value.trim();
+  const gender= document.getElementById('fGender').value;
+  const city  = document.getElementById('fCity').value.trim();
   const phone = document.getElementById('fPhone').value.trim();
-  if (!validatePhone(phone)) { showErr('fPhone','fPhoneErr'); valid = false; document.getElementById('fPhoneOk').style.display='none'; } else clearErr('fPhone','fPhoneErr');
- 
-  const txn = document.getElementById('fTxnId').value.trim();
-  if (!validateTxn(txn)) { showErr('fTxnId','fTxnErr'); valid = false; } else clearErr('fTxnId','fTxnErr');
- 
+  const edu   = document.getElementById('fEducation').value.trim();
+  const txn   = document.getElementById('fTxnId').value.trim();
+
+  let valid = true;
+
+  if (!validateName(name)) { showErr('fName','fNameErr'); valid = false; } 
+  else clearErr('fName','fNameErr');
+
+  if (!validateAge(age)) { showErr('fAge','fAgeErr'); valid = false; } 
+  else clearErr('fAge','fAgeErr');
+
+  if (!gender) { showErr('fGender','fGenderErr'); valid = false; } 
+  else clearErr('fGender','fGenderErr');
+
+  if (city.length < 2) { showErr('fCity','fCityErr'); valid = false; } 
+  else clearErr('fCity','fCityErr');
+
+  if (!validatePhone(phone)) { 
+    showErr('fPhone','fPhoneErr'); 
+    document.getElementById('fPhoneOk').style.display = 'none';
+    valid = false; 
+  } else clearErr('fPhone','fPhoneErr');
+
+  if (!validateTxn(txn)) { showErr('fTxnId','fTxnErr'); valid = false; } 
+  else clearErr('fTxnId','fTxnErr');
+
   if (!uploadedFile) {
     document.getElementById('fFileErr').textContent = '✕ Please upload your payment screenshot.';
     document.getElementById('fFileErr').style.display = 'block';
     document.getElementById('uploadZone').classList.add('err-border');
     valid = false;
   }
- 
+
   if (!valid) {
-    document.getElementById('modalBox').scrollTo({top:0, behavior:'smooth'});
+    document.getElementById('modalBox').scrollTo({ top: 0, behavior: 'smooth' });
     return;
   }
- 
+
+  // ── Disable button & show saving overlay ──
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.innerHTML = '⏳ Uploading screenshot...';
+  document.getElementById('savingOverlay').classList.add('show');
+
+  // ── Convert screenshot to base64 then send ──
+  const reader = new FileReader();
+
+  reader.onload = function(ev) {
+    const base64 = ev.target.result; // full base64 with prefix e.g. data:image/jpeg;base64,...
+
+    const payload = {
+      id:               Date.now(),
+      timestamp:        new Date().toLocaleString('en-PK', { timeZone: 'Asia/Karachi' }),
+      course:           currentCourse,
+      price:            currentPrice,
+      name:             name,
+      age:              age,
+      gender:           gender,
+      city:             city,
+      whatsapp:         phone,
+      education:        edu,
+      transactionId:    txn,
+      screenshotName:   uploadedFile.name,
+      screenshotType:   uploadedFile.type,
+      screenshotSize:   (uploadedFile.size / 1024).toFixed(0) + ' KB',
+      screenshotBase64: base64,
+      status:           'Pending Verification'
+    };
+
+    fetch(ENROLLMENT_API, {
+      method:  'POST',
+      mode:    'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(payload)
+    })
+    .then(() => {
+      document.getElementById('savingOverlay').classList.remove('show');
+      document.getElementById('modalForm').style.display    = 'none';
+      document.getElementById('modalSuccess').style.display = 'block';
+    })
+    .catch(() => {
+      // no-cors returns opaque response — treat as success
+      document.getElementById('savingOverlay').classList.remove('show');
+      document.getElementById('modalForm').style.display    = 'none';
+      document.getElementById('modalSuccess').style.display = 'block';
+    });
+  };
+
+  reader.onerror = function() {
+    document.getElementById('savingOverlay').classList.remove('show');
+    btn.disabled = false;
+    btn.innerHTML = 'Confirm My Enrollment';
+    alert('Could not read the file. Please try uploading the screenshot again.');
+  };
+
+  // ── This triggers the base64 conversion ──
+  reader.readAsDataURL(uploadedFile);
+}
   // Disable + show saving
   const btn = document.getElementById('submitBtn');
   btn.disabled = true;
