@@ -10,7 +10,6 @@
 <meta property="og:type" content="website">
 <meta name="twitter:title" content="ہنر | HUNAR — Discover Your Skill. Build Your Future.">
 <meta name="twitter:description" content="Pakistan's skill academy. Urdu-medium courses with live instructor support.">
-<!-- Cloudflare Turnstile -->
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -26,8 +25,6 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:'Outfit',sans-serif;background:var(--off-white);color:var(--text);overflow-x:hidden;}
- 
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:68px;background:rgba(249,247,244,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
 .nav-logo-urdu{font-size:22px;color:var(--gold);}
@@ -43,8 +40,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .mobile-menu.open{display:flex;}
 .mobile-menu a{font-size:15px;color:var(--text-mid);text-decoration:none;}
 .mobile-cta-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--wa);color:var(--white);padding:12px 24px;border-radius:4px;font-size:14px;font-weight:500;text-decoration:none;margin-top:4px;}
- 
-/* HERO */
 .hero{min-height:100vh;background:var(--teal);display:flex;flex-direction:column;justify-content:center;padding:120px 5% 80px;position:relative;overflow:hidden;}
 .hero-grain{position:absolute;inset:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:.4;}
 .hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(184,150,12,.12) 0%,transparent 70%);top:-100px;right:-100px;pointer-events:none;}
@@ -66,13 +61,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero-badge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:8px 16px;border-radius:100px;font-size:12px;color:rgba(255,255,255,.6);font-weight:300;}
 .hero-badge::before{content:'✓';color:var(--gold);font-size:11px;font-weight:600;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
- 
-/* PROBLEM STRIP */
 .problem-strip{background:var(--gold-pale);border-top:1px solid rgba(184,150,12,.2);border-bottom:1px solid rgba(184,150,12,.2);padding:20px 5%;text-align:center;}
 .problem-strip p{font-size:15px;color:var(--teal);font-weight:400;}
 .problem-strip strong{font-weight:600;}
- 
-/* ORIENTATION BANNER */
 .orientation-banner{background:linear-gradient(135deg,#0A4A46,#042C2A);padding:40px 5%;text-align:center;}
 .orientation-content{max-width:800px;margin:0 auto;}
 .orientation-content h3{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold-light);margin-bottom:12px;font-weight:500;}
@@ -86,16 +77,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .btn-orientation{background:var(--gold);color:var(--teal);padding:11px 24px;border-radius:4px;font-size:14px;font-weight:600;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s;}
 .btn-orientation:hover{background:var(--gold-light);}
 .btn-orientation:disabled{background:#888;cursor:not-allowed;}
- 
-/* SECTIONS */
 .section{padding:96px 5%;}
 .section-inner{max-width:1100px;margin:0 auto;}
 .section-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-light);margin-bottom:12px;display:block;}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,50px);font-weight:400;color:var(--teal);line-height:1.2;margin-bottom:16px;}
 .section-title em{font-style:italic;color:var(--gold);}
 .section-sub{font-size:16px;color:var(--text-mid);line-height:1.7;max-width:540px;font-weight:300;}
- 
-/* DIFF */
 .diff-section{background:var(--white);}
 .diff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px;margin-top:56px;border:1px solid var(--border);border-radius:8px;overflow:hidden;}
 .diff-card{padding:36px 28px;background:var(--white);border-right:1px solid var(--border);transition:background .3s;}
@@ -104,8 +91,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .diff-num{font-family:'Cormorant Garamond',serif;font-size:42px;color:rgba(184,150,12,.2);line-height:1;margin-bottom:16px;font-weight:300;}
 .diff-title{font-size:14px;font-weight:600;color:var(--teal);margin-bottom:8px;line-height:1.4;}
 .diff-desc{font-size:13px;color:var(--text-mid);line-height:1.6;font-weight:300;}
- 
-/* COURSES */
 .courses-section{background:var(--off-white);}
 .courses-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:56px;}
 .course-card{background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;}
@@ -132,8 +117,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .btn-enroll.gold:hover{background:var(--gold-light);}
 .bundle-banner{background:linear-gradient(135deg,var(--teal),var(--teal-mid));padding:6px 28px;text-align:center;}
 .bundle-banner p{font-size:12px;color:var(--gold-light);font-weight:500;letter-spacing:.04em;}
- 
-/* HOW */
 .how-section{background:var(--teal);}
 .how-section .section-title{color:var(--white);}
 .how-section .section-sub{color:rgba(255,255,255,.55);}
@@ -144,8 +127,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .step-num{font-family:'Cormorant Garamond',serif;font-size:56px;color:rgba(184,150,12,.2);line-height:1;margin-bottom:16px;font-weight:300;}
 .step-title{font-size:14px;font-weight:600;color:var(--white);margin-bottom:8px;}
 .step-desc{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;font-weight:300;}
- 
-/* INSTRUCTORS */
 .instructor-section{background:var(--off-white);}
 .instructors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:56px;}
 .instructor-card{background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;}
@@ -160,15 +141,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .instructor-stat-row{display:flex;gap:16px;padding-top:16px;border-top:1px solid var(--border);flex-wrap:wrap;}
 .istat-val{font-size:13px;font-weight:600;color:var(--teal);}
 .istat-label{font-size:11px;color:var(--text-light);margin-top:1px;}
- 
-/* TESTIMONIALS */
 .testimonials-section{background:var(--white);}
 .testimonials-note{display:inline-flex;align-items:center;gap:8px;background:var(--teal-pale);border:1px solid rgba(15,110,86,.2);padding:8px 16px;border-radius:100px;font-size:12px;color:var(--teal-light);font-weight:500;margin-top:16px;margin-bottom:40px;}
 .testimonials-empty{text-align:center;padding:48px 20px;background:var(--off-white);border:1px dashed var(--border);border-radius:8px;}
 .testimonials-empty p{font-size:15px;color:var(--text-mid);margin-bottom:10px;}
 .testimonials-empty a{color:var(--teal-light);font-weight:500;text-decoration:none;}
- 
-/* PAYMENT */
 .payment-section{background:var(--off-white);}
 .payment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:48px;}
 .payment-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:28px 24px;text-align:center;transition:border-color .2s,box-shadow .2s;}
@@ -180,8 +157,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .payment-holder{font-size:12px;color:var(--text-light);margin-top:3px;}
 .payment-note-box{background:var(--teal-pale);border:1px solid rgba(15,110,86,.15);border-radius:8px;padding:20px 24px;margin-top:20px;font-size:14px;color:var(--teal);line-height:1.8;font-weight:300;}
 .payment-note-box strong{font-weight:600;}
- 
-/* COMMUNITY */
 .community-section{background:var(--teal);}
 .community-section .section-label{color:var(--gold);}
 .community-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:56px;display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center;margin-top:48px;}
@@ -197,8 +172,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .community-box-sub{font-size:13px;color:rgba(255,255,255,.45);margin-bottom:28px;line-height:1.6;}
 .btn-wa{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--wa);color:var(--white);padding:15px;border-radius:4px;text-decoration:none;font-size:15px;font-weight:600;transition:background .2s,transform .2s;}
 .btn-wa:hover{background:var(--wa-dark);transform:translateY(-1px);}
- 
-/* FAQ */
 .faq-section{background:var(--white);}
 .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px;}
 .faq-item{border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--off-white);}
@@ -208,8 +181,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .faq-item.open .faq-q::after{transform:rotate(45deg);}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;font-size:14px;color:var(--text-mid);line-height:1.7;padding:0 24px;font-weight:300;background:var(--white);}
 .faq-item.open .faq-a{max-height:300px;padding:0 24px 20px;}
- 
-/* CTA */
 .cta-section{background:var(--teal);padding:96px 5%;text-align:center;}
 .cta-inner{max-width:600px;margin:0 auto;}
 .cta-urdu{font-size:48px;color:var(--gold);margin-bottom:8px;}
@@ -220,8 +191,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .btn-cta-wa:hover{background:var(--wa-dark);}
 .btn-cta-ghost{display:inline-block;background:transparent;color:rgba(255,255,255,.7);padding:14px 32px;border-radius:4px;border:1px solid rgba(255,255,255,.2);font-size:14px;font-weight:400;text-decoration:none;transition:all .2s;}
 .btn-cta-ghost:hover{border-color:rgba(255,255,255,.5);color:var(--white);}
- 
-/* FOOTER */
 footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255,255,255,.06);}
 .footer-inner{max-width:1100px;margin:0 auto;}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:56px;}
@@ -238,21 +207,15 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
 .footer-copy,.footer-made{font-size:12px;color:rgba(255,255,255,.3);font-weight:300;}
 .wa-float{position:fixed;bottom:28px;right:28px;z-index:99;width:52px;height:52px;border-radius:50%;background:var(--wa);color:white;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 16px rgba(37,211,102,.4);transition:transform .2s,box-shadow .2s;}
 .wa-float:hover{transform:scale(1.08);box-shadow:0 8px 24px rgba(37,211,102,.5);}
- 
-/* MODAL */
 .modal-overlay{display:none;position:fixed;inset:0;z-index:1000;background:rgba(4,44,42,.75);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px;}
 .modal-overlay.open{display:flex;}
 .modal{background:var(--white);border-radius:12px;width:100%;max-width:580px;max-height:94vh;overflow-y:auto;box-shadow:0 24px 80px rgba(4,44,42,.3);animation:modalIn .35s ease;}
 @keyframes modalIn{from{opacity:0;transform:translateY(20px) scale(.97);}to{opacity:1;transform:translateY(0) scale(1);}}
- 
-/* Modal Header */
 .modal-header{background:linear-gradient(135deg,var(--teal),var(--teal-mid));padding:28px 32px 24px;position:relative;}
 .modal-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.12);border:none;color:var(--white);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;font-family:'Outfit',sans-serif;line-height:1;}
 .modal-close:hover{background:rgba(255,255,255,.22);}
 .modal-course-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light);margin-bottom:4px;}
 .modal-course-name{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--white);font-weight:400;margin-bottom:20px;}
- 
-/* Payment box in modal */
 .pay-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:18px 20px;}
 .pay-box-label{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:14px;}
 .pay-method{display:flex;align-items:flex-start;gap:14px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);}
@@ -264,23 +227,19 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
 .pay-total-row{display:flex;align-items:center;justify-content:space-between;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);}
 .pay-total-label{font-size:13px;color:rgba(255,255,255,.55);}
 .pay-total-val{font-size:22px;font-weight:700;color:var(--gold-light);}
- 
-/* Modal Form */
 .modal-body{padding:28px 32px 32px;}
 .form-step-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-light);margin-bottom:20px;display:block;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
 .form-row.one{grid-template-columns:1fr;}
 .fg{display:flex;flex-direction:column;}
 .fg label{font-size:12px;font-weight:500;color:var(--text-mid);margin-bottom:6px;}
-.fg input,.fg select,.fg textarea{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:6px;font-family:'Outfit',sans-serif;font-size:14px;color:var(--text);background:var(--off-white);outline:none;transition:border-color .2s,background .2s;}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--teal-light);background:var(--white);}
+.fg input,.fg select{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:6px;font-family:'Outfit',sans-serif;font-size:14px;color:var(--text);background:var(--off-white);outline:none;transition:border-color .2s,background .2s;}
+.fg input:focus,.fg select:focus{border-color:var(--teal-light);background:var(--white);}
 .fg input.field-err,.fg select.field-err{border-color:var(--error);background:var(--error-bg);}
 .field-msg{font-size:11px;margin-top:4px;display:none;}
 .field-msg.show{display:block;}
 .field-msg.err-msg{color:var(--error);}
 .field-msg.ok-msg{color:var(--teal-light);}
- 
-/* Upload */
 .upload-zone{border:2px dashed var(--border);border-radius:8px;padding:28px 20px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;position:relative;margin-bottom:14px;}
 .upload-zone:hover,.upload-zone.drag{border-color:var(--teal-light);background:var(--teal-pale);}
 .upload-zone.err-border{border-color:var(--error);}
@@ -293,25 +252,17 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
 .preview-wrap img{width:100%;max-height:180px;object-fit:contain;border-radius:6px;border:1px solid var(--border);}
 .preview-name{font-size:12px;color:var(--teal-light);margin-top:6px;font-weight:500;}
 .preview-change{font-size:11px;color:var(--text-light);cursor:pointer;text-decoration:underline;margin-top:4px;display:inline-block;}
- 
-/* Turnstile */
 .turnstile-wrap{display:flex;justify-content:center;margin-bottom:16px;}
- 
-/* Submit */
 .submit-btn{width:100%;background:var(--teal);color:var(--white);border:none;padding:14px;border-radius:6px;font-family:'Outfit',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:background .2s;display:flex;align-items:center;justify-content:center;gap:8px;}
 .submit-btn:hover{background:var(--teal-mid);}
 .submit-btn:disabled{background:#aaa;cursor:not-allowed;}
 .modal-footnote{font-size:12px;color:var(--text-light);text-align:center;margin-top:10px;line-height:1.6;}
- 
-/* Success */
 .modal-success{display:none;padding:52px 32px;text-align:center;}
 .success-emoji{font-size:60px;margin-bottom:16px;}
 .success-title{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--teal);font-weight:400;margin-bottom:12px;}
 .success-sub{font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:28px;}
 .success-wa{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:var(--white);padding:12px 28px;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none;transition:background .2s;}
 .success-wa:hover{background:var(--wa-dark);}
- 
-/* Saving overlay */
 .saving-overlay{display:none;position:fixed;inset:0;z-index:2000;background:rgba(4,44,42,.55);align-items:center;justify-content:center;}
 .saving-overlay.show{display:flex;}
 .saving-box{background:var(--white);border-radius:12px;padding:36px 48px;text-align:center;box-shadow:0 16px 48px rgba(4,44,42,.2);}
@@ -319,55 +270,25 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
 @keyframes spin{to{transform:rotate(360deg);}}
 .saving-text{font-size:15px;color:var(--teal);font-weight:500;}
 .saving-sub{font-size:13px;color:var(--text-light);margin-top:4px;}
- 
-/* RESPONSIVE */
-@media(max-width:900px){
-  .community-card{grid-template-columns:1fr;gap:36px;padding:36px 28px;}
-  .footer-top{grid-template-columns:1fr 1fr;gap:32px;}
-}
-@media(max-width:768px){
-  .nav-links{display:none;}
-  .hamburger{display:flex;}
-  .faq-grid{grid-template-columns:1fr;}
-  .steps-grid{grid-template-columns:1fr 1fr;}
-  .step-card{border-bottom:1px solid rgba(255,255,255,.08);}
-  .diff-grid{grid-template-columns:1fr 1fr;}
-  .form-row{grid-template-columns:1fr;}
-  .modal-header,.modal-body{padding:22px 18px;}
-}
-@media(max-width:480px){
-  .footer-top{grid-template-columns:1fr;}
-  .steps-grid{grid-template-columns:1fr;}
-  .diff-grid{grid-template-columns:1fr;}
-  .hero-actions{flex-direction:column;}
-  .community-card{padding:28px 18px;}
-  .modal{border-radius:8px;}
-}
+@media(max-width:900px){.community-card{grid-template-columns:1fr;gap:36px;padding:36px 28px;}.footer-top{grid-template-columns:1fr 1fr;gap:32px;}}
+@media(max-width:768px){.nav-links{display:none;}.hamburger{display:flex;}.faq-grid{grid-template-columns:1fr;}.steps-grid{grid-template-columns:1fr 1fr;}.step-card{border-bottom:1px solid rgba(255,255,255,.08);}.diff-grid{grid-template-columns:1fr 1fr;}.form-row{grid-template-columns:1fr;}.modal-header,.modal-body{padding:22px 18px;}}
+@media(max-width:480px){.footer-top{grid-template-columns:1fr;}.steps-grid{grid-template-columns:1fr;}.diff-grid{grid-template-columns:1fr;}.hero-actions{flex-direction:column;}.community-card{padding:28px 18px;}.modal{border-radius:8px;}}
 </style>
 </head>
 <body>
  
-<!-- SAVING OVERLAY -->
 <div class="saving-overlay" id="savingOverlay">
   <div class="saving-box">
     <div class="saving-spinner"></div>
-    <div class="saving-text">Saving your enrollment...</div>
+    <div class="saving-text">Uploading & saving your enrollment...</div>
     <div class="saving-sub">Please wait — do not close this page</div>
   </div>
 </div>
  
-<!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">
-    <span class="nav-logo-urdu">ہنر</span>
-    <span class="nav-logo-en">HUNAR</span>
-  </a>
+  <a href="#" class="nav-logo"><span class="nav-logo-urdu">ہنر</span><span class="nav-logo-en">HUNAR</span></a>
   <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#courses">Courses</a>
-    <a href="#instructors">Instructors</a>
-    <a href="#payment">How to Pay</a>
-    <a href="#faq">FAQ</a>
+    <a href="#about">About</a><a href="#courses">Courses</a><a href="#instructors">Instructors</a><a href="#payment">How to Pay</a><a href="#faq">FAQ</a>
     <a href="https://whatsapp.com/channel/0029VbB6ASK1CYoUFcwneZ1L" target="_blank" class="nav-cta">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       WhatsApp Channel
@@ -382,13 +303,9 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
   <a href="#instructors" onclick="toggleMenu()">Instructors</a>
   <a href="#payment" onclick="toggleMenu()">How to Pay</a>
   <a href="#faq" onclick="toggleMenu()">FAQ</a>
-  <a href="https://whatsapp.com/channel/0029VbB6ASK1CYoUFcwneZ1L" target="_blank" class="mobile-cta-btn" onclick="toggleMenu()">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    Join WhatsApp Channel
-  </a>
+  <a href="https://whatsapp.com/channel/0029VbB6ASK1CYoUFcwneZ1L" target="_blank" class="mobile-cta-btn" onclick="toggleMenu()">Join WhatsApp Channel</a>
 </div>
  
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-grain"></div><div class="hero-glow"></div><div class="hero-glow2"></div>
   <div class="hero-inner">
@@ -416,7 +333,6 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
   <p>Most students in Pakistan know they want a better future — <strong>they just don't know which skill to start with.</strong> Hunar solves that first.</p>
 </div>
  
-<!-- ORIENTATION BANNER — sends to Google Sheet -->
 <div class="orientation-banner">
   <div class="orientation-content">
     <h3>Free Orientation Session 🎥</h3>
@@ -432,7 +348,6 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
   </div>
 </div>
  
-<!-- WHY HUNAR -->
 <section class="section diff-section" id="about">
   <div class="section-inner">
     <span class="section-label">Why Hunar</span>
@@ -448,14 +363,12 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
   </div>
 </section>
  
-<!-- COURSES -->
 <section class="section courses-section" id="courses">
   <div class="section-inner">
     <span class="section-label">Current Courses</span>
     <h2 class="section-title">Skills with real<br><em>workplace value.</em></h2>
     <p class="section-sub">Three courses — chosen because they lead directly to income, not because they sound impressive.</p>
     <div class="courses-grid">
- 
       <div class="course-card">
         <div class="course-header">
           <div class="course-tag">Digital Skills</div>
@@ -475,7 +388,6 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
           <button class="btn-enroll" onclick="openModal('Excel Essentials','Rs. 1,999')">Enroll Now →</button>
         </div>
       </div>
- 
       <div class="course-card">
         <div class="course-header">
           <div class="course-tag">Digital Skills</div>
@@ -495,7 +407,6 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
           <button class="btn-enroll" onclick="openModal('WordPress Development','Rs. 2,499')">Enroll Now →</button>
         </div>
       </div>
- 
       <div class="course-card">
         <div class="course-header">
           <div class="course-tag">AI Skills</div>
@@ -515,7 +426,6 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
           <button class="btn-enroll" onclick="openModal('Prompt Engineering','Rs. 2,499')">Enroll Now →</button>
         </div>
       </div>
- 
       <div class="course-card featured" style="grid-column:1/-1;">
         <div class="bundle-banner"><p>★ Most Popular — Best Value — Save Rs. 1,998</p></div>
         <div class="course-header" style="padding-top:24px;">
@@ -540,12 +450,10 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
           <button class="btn-enroll gold" onclick="openModal('Career Starter Track (All 3 Courses)','Rs. 4,999')">Start Your Journey →</button>
         </div>
       </div>
- 
     </div>
   </div>
 </section>
  
-<!-- HOW IT WORKS -->
 <section class="section how-section" id="how">
   <div class="section-inner">
     <span class="section-label">The Process</span>
@@ -561,7 +469,6 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
   </div>
 </section>
  
-<!-- INSTRUCTORS -->
 <section class="section instructor-section" id="instructors">
   <div class="section-inner">
     <span class="section-label">Your Faculty</span>
@@ -569,55 +476,21 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
     <p class="section-sub">Each Hunar instructor is a working professional in her field — teaching in Urdu and available to you throughout your course.</p>
     <div class="instructors-grid">
       <div class="instructor-card">
-        <div class="instructor-visual">
-          <div class="instructor-badge">Excel Instructor</div>
-          <div class="instructor-name">Ayesha Ijaz</div>
-          <div class="instructor-course-tag">Teaches: Excel Essentials</div>
-        </div>
-        <div class="instructor-body">
-          <div class="instructor-bio">Ayesha has spent years working with Excel in real professional settings — building reports, managing data, and helping teams make sense of numbers. She knows exactly where students get confused. Her lessons are clear, practical, and explained in Urdu with examples from everyday Pakistani work life. No jargon. Just teaching that actually works.</div>
-          <div class="instructor-stat-row">
-            <div><div class="istat-val">Urdu</div><div class="istat-label">Teaching Language</div></div>
-            <div><div class="istat-val">Always On</div><div class="istat-label">Student Support</div></div>
-            <div><div class="istat-val">Real Projects</div><div class="istat-label">Teaching Style</div></div>
-          </div>
-        </div>
+        <div class="instructor-visual"><div class="instructor-badge">Excel Instructor</div><div class="instructor-name">Ayesha Ijaz</div><div class="instructor-course-tag">Teaches: Excel Essentials</div></div>
+        <div class="instructor-body"><div class="instructor-bio">Ayesha has spent years working with Excel in real professional settings — building reports, managing data, and helping teams make sense of numbers. She knows exactly where students get confused. Her lessons are clear, practical, and explained in Urdu with examples from everyday Pakistani work life. No jargon. Just teaching that actually works.</div><div class="instructor-stat-row"><div><div class="istat-val">Urdu</div><div class="istat-label">Teaching Language</div></div><div><div class="istat-val">Always On</div><div class="istat-label">Student Support</div></div><div><div class="istat-val">Real Projects</div><div class="istat-label">Teaching Style</div></div></div></div>
       </div>
       <div class="instructor-card">
-        <div class="instructor-visual">
-          <div class="instructor-badge">WordPress Instructor</div>
-          <div class="instructor-name">Sadia</div>
-          <div class="instructor-course-tag">Teaches: WordPress Development</div>
-        </div>
-        <div class="instructor-body">
-          <div class="instructor-bio">Sadia builds websites — and has helped students go from never touching a website to landing their first paying client on Fiverr. She teaches WordPress the way it's actually used in freelancing: step by step, in Urdu, from absolute zero. By the end you won't just know WordPress — you'll know how to use it to earn money.</div>
-          <div class="instructor-stat-row">
-            <div><div class="istat-val">Urdu</div><div class="istat-label">Teaching Language</div></div>
-            <div><div class="istat-val">Always On</div><div class="istat-label">Student Support</div></div>
-            <div><div class="istat-val">Freelance-Focused</div><div class="istat-label">Teaching Style</div></div>
-          </div>
-        </div>
+        <div class="instructor-visual"><div class="instructor-badge">WordPress Instructor</div><div class="instructor-name">Sadia</div><div class="instructor-course-tag">Teaches: WordPress Development</div></div>
+        <div class="instructor-body"><div class="instructor-bio">Sadia builds websites — and has helped students go from never touching a website to landing their first paying client on Fiverr. She teaches WordPress the way it's actually used in freelancing: step by step, in Urdu, from absolute zero. By the end you won't just know WordPress — you'll know how to use it to earn money.</div><div class="instructor-stat-row"><div><div class="istat-val">Urdu</div><div class="istat-label">Teaching Language</div></div><div><div class="istat-val">Always On</div><div class="istat-label">Student Support</div></div><div><div class="istat-val">Freelance-Focused</div><div class="istat-label">Teaching Style</div></div></div></div>
       </div>
       <div class="instructor-card">
-        <div class="instructor-visual">
-          <div class="instructor-badge">AI Skills Instructor</div>
-          <div class="instructor-name">Sabawoon</div>
-          <div class="instructor-course-tag">Teaches: Prompt Engineering</div>
-        </div>
-        <div class="instructor-body">
-          <div class="instructor-bio">Sabawoon uses AI tools every day — for writing, research, content creation, and productivity. She knows what actually works and what's hype. Her course teaches you how to use tools like ChatGPT to get real results — explained in Urdu, with practical exercises you can apply the same day. Hands-on, useful, built for the real world.</div>
-          <div class="instructor-stat-row">
-            <div><div class="istat-val">Urdu</div><div class="istat-label">Teaching Language</div></div>
-            <div><div class="istat-val">Always On</div><div class="istat-label">Student Support</div></div>
-            <div><div class="istat-val">Hands-On</div><div class="istat-label">Teaching Style</div></div>
-          </div>
-        </div>
+        <div class="instructor-visual"><div class="instructor-badge">AI Skills Instructor</div><div class="instructor-name">Sabawoon</div><div class="instructor-course-tag">Teaches: Prompt Engineering</div></div>
+        <div class="instructor-body"><div class="instructor-bio">Sabawoon uses AI tools every day — for writing, research, content creation, and productivity. She knows what actually works and what's hype. Her course teaches you how to use tools like ChatGPT to get real results — explained in Urdu, with practical exercises you can apply the same day. Hands-on, useful, built for the real world.</div><div class="instructor-stat-row"><div><div class="istat-val">Urdu</div><div class="istat-label">Teaching Language</div></div><div><div class="istat-val">Always On</div><div class="istat-label">Student Support</div></div><div><div class="istat-val">Hands-On</div><div class="istat-label">Teaching Style</div></div></div></div>
       </div>
     </div>
   </div>
 </section>
  
-<!-- TESTIMONIALS -->
 <section class="section testimonials-section">
   <div class="section-inner">
     <span class="section-label">Student Voices</span>
@@ -630,49 +503,21 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
   </div>
 </section>
  
-<!-- PAYMENT METHODS -->
 <section class="section payment-section" id="payment">
   <div class="section-inner">
     <span class="section-label">How to Pay</span>
     <h2 class="section-title">One secure way<br><em>to pay.</em></h2>
     <p class="section-sub">We use a single verified bank account for all payments — simple, safe, and traceable.</p>
     <div class="payment-grid">
-      <div class="payment-card">
-        <div class="payment-icon">🏦</div>
-        <div class="payment-name">Easypaisa Digital Bank</div>
-        <div class="payment-detail">Transfer directly via any bank app, Easypaisa, or JazzCash using the IBAN below.</div>
-        <div class="payment-iban">PK11TMFB0000000073405665</div>
-        <div class="payment-holder">Tabi Nah Sadaqat</div>
-      </div>
-      <div class="payment-card">
-        <div class="payment-icon">📋</div>
-        <div class="payment-name">After Paying</div>
-        <div class="payment-detail">Note your Transaction ID / Reference Number from the payment confirmation screen.</div>
-        <div class="payment-iban" style="font-size:12px;letter-spacing:0;">You'll enter it in the enrollment form</div>
-      </div>
-      <div class="payment-card">
-        <div class="payment-icon">📸</div>
-        <div class="payment-name">Upload Screenshot</div>
-        <div class="payment-detail">Take a screenshot of your payment confirmation and upload it in the enrollment form.</div>
-        <div class="payment-iban" style="font-size:12px;letter-spacing:0;">JPG / PNG / PDF — max 5MB</div>
-      </div>
-      <div class="payment-card">
-        <div class="payment-icon">✅</div>
-        <div class="payment-name">Verified in 24 Hours</div>
-        <div class="payment-detail">Our team manually verifies every payment. Once confirmed, your instructor adds you to the course group.</div>
-        <div class="payment-iban" style="font-size:12px;letter-spacing:0;">Status: Pending → Verified</div>
-      </div>
+      <div class="payment-card"><div class="payment-icon">🏦</div><div class="payment-name">Easypaisa Digital Bank</div><div class="payment-detail">Transfer directly via any bank app, Easypaisa, or JazzCash using the IBAN below.</div><div class="payment-iban">PK11TMFB0000000073405665</div><div class="payment-holder">Tabi Nah Sadaqat</div></div>
+      <div class="payment-card"><div class="payment-icon">📋</div><div class="payment-name">After Paying</div><div class="payment-detail">Note your Transaction ID / Reference Number from the payment confirmation screen.</div><div class="payment-iban" style="font-size:12px;letter-spacing:0;">You'll enter it in the enrollment form</div></div>
+      <div class="payment-card"><div class="payment-icon">📸</div><div class="payment-name">Upload Screenshot</div><div class="payment-detail">Take a screenshot of your payment confirmation and upload it in the enrollment form.</div><div class="payment-iban" style="font-size:12px;letter-spacing:0;">JPG / PNG / PDF — max 5MB</div></div>
+      <div class="payment-card"><div class="payment-icon">✅</div><div class="payment-name">Verified in 24 Hours</div><div class="payment-detail">Our team manually verifies every payment. Once confirmed, your instructor adds you to the course group.</div><div class="payment-iban" style="font-size:12px;letter-spacing:0;">Status: Pending → Verified</div></div>
     </div>
-    <div class="payment-note-box">
-      <strong>Account Title:</strong> Tabi Nah Sadaqat &nbsp;·&nbsp;
-      <strong>Bank:</strong> Easypaisa Digital Bank &nbsp;·&nbsp;
-      <strong>IBAN:</strong> PK11TMFB0000000073405665<br>
-      After transferring, click <strong>"Enroll Now"</strong> on your course → fill in your details → upload screenshot + transaction ID → submit. Your enrollment is marked <strong>Pending Verification</strong> until our team confirms your payment.
-    </div>
+    <div class="payment-note-box"><strong>Account Title:</strong> Tabi Nah Sadaqat &nbsp;·&nbsp; <strong>Bank:</strong> Easypaisa Digital Bank &nbsp;·&nbsp; <strong>IBAN:</strong> PK11TMFB0000000073405665<br>After transferring, click <strong>"Enroll Now"</strong> on your course → fill in your details → upload screenshot + transaction ID → submit. Your enrollment is marked <strong>Pending Verification</strong> until our team confirms your payment.</div>
   </div>
 </section>
  
-<!-- COMMUNITY -->
 <section class="section community-section" id="community">
   <div class="section-inner">
     <span class="section-label">Hunar Community</span>
@@ -699,7 +544,6 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
   </div>
 </section>
  
-<!-- FAQ -->
 <section class="section faq-section" id="faq">
   <div class="section-inner">
     <span class="section-label">Questions</span>
@@ -707,17 +551,16 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
     <div class="faq-grid">
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is Hunar?</div><div class="faq-a">Hunar is a Pakistan-based skill academy for students aged 16–22. We help you discover which skill to learn — then teach it in Urdu, with a real instructor available every step of the way. Lessons are delivered one per day via WhatsApp.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Who are these courses for?</div><div class="faq-a">Pakistani students aged 16–22 — in school, university, or recently graduated. No prior experience needed. If you can show up for one lesson a day, Hunar takes care of the rest.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Are courses live or recorded?</div><div class="faq-a">Both. Pre-recorded lessons come to your WhatsApp daily at a steady, manageable pace. Your instructor is also available live throughout the course for questions and support. You get the structure of recorded content with the support of a live teacher.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Are courses live or recorded?</div><div class="faq-a">Both. Pre-recorded lessons come to your WhatsApp daily at a steady, manageable pace. Your instructor is also available live throughout the course for questions and support.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How exactly are lessons delivered?</div><div class="faq-a">Directly to your WhatsApp — one lesson every morning. No overwhelming Google Drive folders. Just one focused lesson each day that builds on the last. 20–40 minutes, fits any schedule.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I pay?</div><div class="faq-a">Transfer the course fee to IBAN PK11TMFB0000000073405665 (Tabi Nah Sadaqat — Easypaisa Digital Bank). Then click "Enroll Now", fill your details, upload your payment screenshot and transaction ID. Our team verifies within 24 hours and your instructor adds you to the course group.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I contact my instructor directly?</div><div class="faq-a">Yes — directly. Ayesha, Sadia, and Sabawoon are available within their course groups to answer questions, review work, and re-explain anything you don't understand. This is one of the core things that makes Hunar different.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I pay?</div><div class="faq-a">Transfer the course fee to IBAN PK11TMFB0000000073405665 (Tabi Nah Sadaqat — Easypaisa Digital Bank). Then click "Enroll Now", fill your details, upload your payment screenshot and transaction ID. Our team verifies within 24 hours.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I contact my instructor directly?</div><div class="faq-a">Yes — directly. Ayesha, Sadia, and Sabawoon are available within their course groups to answer questions, review work, and re-explain anything you don't understand.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">I don't know which skill to choose — what do I do?</div><div class="faq-a">That's exactly why we created the free orientation session. Enter your WhatsApp number at the top of this page — we'll send you a video that walks you through how to choose the right skill for your situation. No cost, no commitment.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is your refund policy?</div><div class="faq-a">If you're not satisfied within the first 3 days, contact us on WhatsApp and we'll work out a resolution. We'd rather help you find the right course than keep your money for the wrong one.</div></div>
     </div>
   </div>
 </section>
  
-<!-- FINAL CTA -->
 <section class="cta-section">
   <div class="cta-inner">
     <div class="cta-urdu">ہنر</div>
@@ -733,7 +576,6 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
   </div>
 </section>
  
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -742,31 +584,11 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
         <div class="footer-tagline">Discover Your Skill. Build Your Future. Pakistan's skill academy — Urdu-medium, practical, trusted.</div>
         <a href="mailto:hunar.academyinfo@gmail.com" class="footer-email">hunar.academyinfo@gmail.com</a>
       </div>
-      <div class="footer-col">
-        <h4>Courses</h4>
-        <a href="#courses">Excel Essentials</a>
-        <a href="#courses">WordPress Development</a>
-        <a href="#courses">Prompt Engineering</a>
-        <a href="#courses">Career Starter Track</a>
-      </div>
-      <div class="footer-col">
-        <h4>Hunar</h4>
-        <a href="#about">Why Hunar</a>
-        <a href="#instructors">Our Instructors</a>
-        <a href="#payment">How to Pay</a>
-        <a href="#faq">FAQ</a>
-      </div>
-      <div class="footer-col">
-        <h4>Connect</h4>
-        <a href="https://www.instagram.com/hunaracademy_/" target="_blank">Instagram</a>
-        <a href="https://whatsapp.com/channel/0029VbB6ASK1CYoUFcwneZ1L" target="_blank">WhatsApp Channel</a>
-        <a href="mailto:hunar.academyinfo@gmail.com">Email Us</a>
-      </div>
+      <div class="footer-col"><h4>Courses</h4><a href="#courses">Excel Essentials</a><a href="#courses">WordPress Development</a><a href="#courses">Prompt Engineering</a><a href="#courses">Career Starter Track</a></div>
+      <div class="footer-col"><h4>Hunar</h4><a href="#about">Why Hunar</a><a href="#instructors">Our Instructors</a><a href="#payment">How to Pay</a><a href="#faq">FAQ</a></div>
+      <div class="footer-col"><h4>Connect</h4><a href="https://www.instagram.com/hunaracademy_/" target="_blank">Instagram</a><a href="https://whatsapp.com/channel/0029VbB6ASK1CYoUFcwneZ1L" target="_blank">WhatsApp Channel</a><a href="mailto:hunar.academyinfo@gmail.com">Email Us</a></div>
     </div>
-    <div class="footer-bottom">
-      <div class="footer-copy">© 2026 Hunar. All rights reserved.</div>
-      <div class="footer-made">Made with care in Pakistan 🇵🇰</div>
-    </div>
+    <div class="footer-bottom"><div class="footer-copy">© 2026 Hunar. All rights reserved.</div><div class="footer-made">Made with care in Pakistan 🇵🇰</div></div>
   </div>
 </footer>
  
@@ -774,13 +596,9 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
   <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
  
-<!-- ══════════════════════════════════════
-     ENROLLMENT MODAL
-══════════════════════════════════════ -->
+<!-- ENROLLMENT MODAL -->
 <div class="modal-overlay" id="enrollModal" onclick="handleOverlayClick(event)">
   <div class="modal" id="modalBox">
- 
-    <!-- Header with payment details -->
     <div class="modal-header">
       <button class="modal-close" onclick="closeModal()">×</button>
       <div class="modal-course-label">Enrolling In</div>
@@ -801,11 +619,8 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
         </div>
       </div>
     </div>
- 
-    <!-- Student Form -->
     <div class="modal-body" id="modalForm">
       <span class="form-step-label">Step 2 — Fill Your Details & Upload Payment Proof</span>
- 
       <div class="form-row">
         <div class="fg">
           <label>Full Name *</label>
@@ -818,7 +633,6 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
           <span class="field-msg err-msg" id="fAgeErr">Please enter a valid age (10–60)</span>
         </div>
       </div>
- 
       <div class="form-row">
         <div class="fg">
           <label>Gender *</label>
@@ -836,7 +650,6 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
           <span class="field-msg err-msg" id="fCityErr">Please enter your city</span>
         </div>
       </div>
- 
       <div class="form-row one">
         <div class="fg">
           <label>WhatsApp Number *</label>
@@ -845,14 +658,12 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
           <span class="field-msg ok-msg" id="fPhoneOk">✓ Valid Pakistani number</span>
         </div>
       </div>
- 
       <div class="form-row one">
         <div class="fg">
           <label>Education / Occupation</label>
           <input type="text" id="fEducation" placeholder="e.g. FSc Student / Fresh Graduate / Housewife">
         </div>
       </div>
- 
       <div class="form-row one">
         <div class="fg">
           <label>Transaction ID / Reference Number *</label>
@@ -860,8 +671,6 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
           <span class="field-msg err-msg" id="fTxnErr">Please enter your transaction ID from the payment confirmation</span>
         </div>
       </div>
- 
-      <!-- Screenshot Upload -->
       <div class="fg" style="margin-bottom:8px;">
         <label>Payment Screenshot * <span style="font-weight:300;color:var(--text-light);">(JPG/PNG/PDF, max 5MB)</span></label>
       </div>
@@ -877,9 +686,7 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
         <div class="preview-name" id="previewName"></div>
         <span class="preview-change" onclick="changeFile()">Change file</span>
       </div>
-      <span class="field-msg err-msg show" id="fFileErr" style="display:none;margin-bottom:10px;font-size:12px;color:var(--error);"></span>
- 
-      <!-- Cloudflare Turnstile -->
+      <div id="fFileErr" style="display:none;margin-bottom:10px;font-size:12px;color:var(--error);"></div>
       <div class="turnstile-wrap">
         <div class="cf-turnstile"
              data-sitekey="0x4AAAAAADeAiQDRzu8Q8BFo"
@@ -889,64 +696,54 @@ footer{background:var(--teal);padding:64px 5% 32px;border-top:1px solid rgba(255
         </div>
       </div>
       <p style="font-size:11px;color:var(--text-light);text-align:center;margin-bottom:14px;margin-top:-8px;">Complete the security check above to submit</p>
- 
       <button class="submit-btn" id="submitBtn" onclick="submitEnrollment()" disabled>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
         Confirm My Enrollment
       </button>
       <div class="modal-footnote">Your enrollment is sent directly to our secure Google Sheet and marked <strong>Pending Verification</strong>. Once our team confirms your payment, your instructor adds you within 24 hours.</div>
     </div>
- 
-    <!-- Success Screen -->
     <div class="modal-success" id="modalSuccess">
       <div class="success-emoji">🎉</div>
       <div class="success-title">Enrollment Submitted!</div>
-      <div class="success-sub">Your enrollment has been saved to our system and marked <strong>Pending Verification</strong>. Our team will verify your payment and your instructor will add you to the course WhatsApp group within <strong>24 hours</strong>.<br><br>If you have questions in the meantime, message us on WhatsApp.</div>
+      <div class="success-sub">Your enrollment has been saved and marked <strong>Pending Verification</strong>. Our team will verify your payment and your instructor will add you to the course WhatsApp group within <strong>24 hours</strong>.<br><br>If you have questions, message us on WhatsApp.</div>
       <a href="https://whatsapp.com/channel/0029VbB6ASK1CYoUFcwneZ1L" target="_blank" class="success-wa">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Message Us on WhatsApp
       </a>
     </div>
- 
   </div>
 </div>
  
 <script>
-/* ══════════════════════════════════════════
-   API ENDPOINTS
-══════════════════════════════════════════ */
-const ENROLLMENT_API = 'https://script.google.com/macros/s/AKfycbxec4WA60QAmmvh7V2RYwem_c3JaG6tHp0uOeJloldhhLIa3eiZLT1bnXK49pxSv8Sw/exec';
+/* ── API ENDPOINTS ── */
+const ENROLLMENT_API  = 'https://script.google.com/macros/s/AKfycbxec4WA60QAmmvh7V2RYwem_c3JaG6tHp0uOeJloldhhLIa3eiZLT1bnXK49pxSv8Sw/exec';
 const ORIENTATION_API = 'https://script.google.com/macros/s/AKfycbzr-AUQG8VTZ-NS_bSpQdaNMoQmIhiOCzTnt42sRZgwemiMq66hHABwsu_TrO6apkG1/exec';
  
-/* ══════════════════════════════════════════
-   VALIDATION HELPERS
-══════════════════════════════════════════ */
-function validateName(v) { return /^[a-zA-Z\u0600-\u06FF\s]{3,}$/.test(v.trim()); }
+/* ── VALIDATION ── */
+function validateName(v)  { return /^[a-zA-Z\u0600-\u06FF\s]{3,}$/.test(v.trim()); }
 function validatePhone(v) { return /^(\+92|0)3[0-9]{9}$/.test(v.trim().replace(/\s/g,'')); }
-function validateAge(v) { const n = parseInt(v); return !isNaN(n) && n >= 10 && n <= 60; }
-function validateTxn(v) { return v.trim().length >= 4; }
+function validateAge(v)   { const n = parseInt(v); return !isNaN(n) && n >= 10 && n <= 60; }
+function validateTxn(v)   { return v.trim().length >= 4; }
  
 function showErr(id, msgId) {
   document.getElementById(id).classList.add('field-err');
   const m = document.getElementById(msgId);
-  if (m) { m.classList.add('show'); m.style.display = 'block'; }
+  if (m) { m.style.display = 'block'; }
 }
 function clearErr(id, msgId) {
   document.getElementById(id).classList.remove('field-err');
   const m = document.getElementById(msgId);
-  if (m) { m.classList.remove('show'); m.style.display = 'none'; }
+  if (m) { m.style.display = 'none'; }
 }
  
-// Live phone validation
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   const ph = document.getElementById('fPhone');
   if (ph) {
-    ph.addEventListener('input', () => {
+    ph.addEventListener('input', function() {
       const v = ph.value.trim();
       if (v.length > 4) {
         if (validatePhone(v)) {
           clearErr('fPhone','fPhoneErr');
-          document.getElementById('fPhoneOk').classList.add('show');
           document.getElementById('fPhoneOk').style.display = 'block';
         } else {
           showErr('fPhone','fPhoneErr');
@@ -957,9 +754,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
  
-/* ══════════════════════════════════════════
-   TURNSTILE
-══════════════════════════════════════════ */
+/* ── TURNSTILE ── */
 let turnstileToken = null;
 function onTurnstileSuccess(token) {
   turnstileToken = token;
@@ -970,9 +765,7 @@ function onTurnstileExpire() {
   document.getElementById('submitBtn').disabled = true;
 }
  
-/* ══════════════════════════════════════════
-   MODAL
-══════════════════════════════════════════ */
+/* ── MODAL ── */
 let currentCourse = '', currentPrice = '', uploadedFile = null;
  
 function openModal(course, price) {
@@ -984,47 +777,44 @@ function openModal(course, price) {
   document.body.style.overflow = 'hidden';
   resetForm();
 }
+ 
 function closeModal() {
   document.getElementById('enrollModal').classList.remove('open');
   document.body.style.overflow = '';
 }
+ 
 function handleOverlayClick(e) {
   if (e.target === document.getElementById('enrollModal')) closeModal();
 }
  
 function resetForm() {
-  ['fName','fAge','fCity','fPhone','fEducation','fTxnId'].forEach(id => {
-    const el = document.getElementById(id);
+  ['fName','fAge','fCity','fPhone','fEducation','fTxnId'].forEach(function(id) {
+    var el = document.getElementById(id);
     if (el) { el.value = ''; el.classList.remove('field-err'); }
   });
   document.getElementById('fGender').value = '';
   document.getElementById('fGender').classList.remove('field-err');
   document.getElementById('fScreenshot').value = '';
   uploadedFile = null;
-  document.getElementById('previewWrap').style.display = 'none';
-  document.getElementById('uploadZone').style.display  = '';
+  document.getElementById('previewWrap').style.display  = 'none';
+  document.getElementById('uploadZone').style.display   = '';
   document.getElementById('uploadZone').classList.remove('err-border');
-  document.getElementById('fFileErr').style.display = 'none';
+  document.getElementById('fFileErr').style.display     = 'none';
+  document.getElementById('fPhoneOk').style.display     = 'none';
   document.getElementById('modalForm').style.display    = '';
   document.getElementById('modalSuccess').style.display = 'none';
-  document.getElementById('fPhoneOk').style.display = 'none';
-  // Reset turnstile
   turnstileToken = null;
   if (window.turnstile) window.turnstile.reset();
   document.getElementById('submitBtn').disabled = true;
 }
  
-/* ══════════════════════════════════════════
-   FILE UPLOAD — with type & size validation
-══════════════════════════════════════════ */
-const ALLOWED_TYPES = ['image/jpeg','image/jpg','image/png','application/pdf'];
-const MAX_SIZE = 5 * 1024 * 1024; // 5MB
+/* ── FILE UPLOAD ── */
+var ALLOWED_TYPES = ['image/jpeg','image/jpg','image/png','application/pdf'];
+var MAX_SIZE = 5 * 1024 * 1024;
  
 function handleFile(e) {
-  const file = e.target.files[0];
+  var file = e.target.files[0];
   if (!file) return;
- 
-  // Type check
   if (!ALLOWED_TYPES.includes(file.type)) {
     document.getElementById('fFileErr').textContent = '✕ Only JPG, PNG, or PDF files are accepted.';
     document.getElementById('fFileErr').style.display = 'block';
@@ -1032,7 +822,6 @@ function handleFile(e) {
     document.getElementById('fScreenshot').value = '';
     return;
   }
-  // Size check
   if (file.size > MAX_SIZE) {
     document.getElementById('fFileErr').textContent = '✕ File is too large. Maximum size is 5MB.';
     document.getElementById('fFileErr').style.display = 'block';
@@ -1040,19 +829,15 @@ function handleFile(e) {
     document.getElementById('fScreenshot').value = '';
     return;
   }
- 
-  // All good
   document.getElementById('fFileErr').style.display = 'none';
   document.getElementById('uploadZone').classList.remove('err-border');
   uploadedFile = file;
- 
   if (file.type === 'application/pdf') {
-    document.getElementById('previewImg').src = '';
     document.getElementById('previewImg').style.display = 'none';
     document.getElementById('previewName').textContent = '📄 ' + file.name + ' (' + (file.size/1024).toFixed(0) + ' KB)';
   } else {
-    const reader = new FileReader();
-    reader.onload = ev => {
+    var reader = new FileReader();
+    reader.onload = function(ev) {
       document.getElementById('previewImg').src = ev.target.result;
       document.getElementById('previewImg').style.display = '';
       document.getElementById('previewName').textContent = '✓ ' + file.name;
@@ -1070,67 +855,47 @@ function changeFile() {
   document.getElementById('uploadZone').style.display  = '';
 }
  
-/* ══════════════════════════════════════════
-   SUBMIT ENROLLMENT → Google Sheet
-══════════════════════════════════════════ */
+/* ── SUBMIT ENROLLMENT → Google Sheet + Google Drive ── */
 function submitEnrollment() {
-  // ── Validate all fields ──
-  const name  = document.getElementById('fName').value.trim();
-  const age   = document.getElementById('fAge').value.trim();
-  const gender= document.getElementById('fGender').value;
-  const city  = document.getElementById('fCity').value.trim();
-  const phone = document.getElementById('fPhone').value.trim();
-  const edu   = document.getElementById('fEducation').value.trim();
-  const txn   = document.getElementById('fTxnId').value.trim();
-
-  let valid = true;
-
-  if (!validateName(name)) { showErr('fName','fNameErr'); valid = false; } 
-  else clearErr('fName','fNameErr');
-
-  if (!validateAge(age)) { showErr('fAge','fAgeErr'); valid = false; } 
-  else clearErr('fAge','fAgeErr');
-
-  if (!gender) { showErr('fGender','fGenderErr'); valid = false; } 
-  else clearErr('fGender','fGenderErr');
-
-  if (city.length < 2) { showErr('fCity','fCityErr'); valid = false; } 
-  else clearErr('fCity','fCityErr');
-
-  if (!validatePhone(phone)) { 
-    showErr('fPhone','fPhoneErr'); 
+  var name   = document.getElementById('fName').value.trim();
+  var age    = document.getElementById('fAge').value.trim();
+  var gender = document.getElementById('fGender').value;
+  var city   = document.getElementById('fCity').value.trim();
+  var phone  = document.getElementById('fPhone').value.trim();
+  var edu    = document.getElementById('fEducation').value.trim();
+  var txn    = document.getElementById('fTxnId').value.trim();
+  var valid  = true;
+ 
+  if (!validateName(name)) { showErr('fName','fNameErr'); valid = false; } else clearErr('fName','fNameErr');
+  if (!validateAge(age))   { showErr('fAge','fAgeErr');   valid = false; } else clearErr('fAge','fAgeErr');
+  if (!gender)             { showErr('fGender','fGenderErr'); valid = false; } else clearErr('fGender','fGenderErr');
+  if (city.length < 2)    { showErr('fCity','fCityErr'); valid = false; } else clearErr('fCity','fCityErr');
+  if (!validatePhone(phone)) {
+    showErr('fPhone','fPhoneErr');
     document.getElementById('fPhoneOk').style.display = 'none';
-    valid = false; 
+    valid = false;
   } else clearErr('fPhone','fPhoneErr');
-
-  if (!validateTxn(txn)) { showErr('fTxnId','fTxnErr'); valid = false; } 
-  else clearErr('fTxnId','fTxnErr');
-
+  if (!validateTxn(txn))  { showErr('fTxnId','fTxnErr'); valid = false; } else clearErr('fTxnId','fTxnErr');
   if (!uploadedFile) {
     document.getElementById('fFileErr').textContent = '✕ Please upload your payment screenshot.';
     document.getElementById('fFileErr').style.display = 'block';
     document.getElementById('uploadZone').classList.add('err-border');
     valid = false;
   }
-
+ 
   if (!valid) {
     document.getElementById('modalBox').scrollTo({ top: 0, behavior: 'smooth' });
     return;
   }
-
-  // ── Disable button & show saving overlay ──
-  const btn = document.getElementById('submitBtn');
+ 
+  var btn = document.getElementById('submitBtn');
   btn.disabled = true;
   btn.innerHTML = '⏳ Uploading screenshot...';
   document.getElementById('savingOverlay').classList.add('show');
-
-  // ── Convert screenshot to base64 then send ──
-  const reader = new FileReader();
-
+ 
+  var reader = new FileReader();
   reader.onload = function(ev) {
-    const base64 = ev.target.result; // full base64 with prefix e.g. data:image/jpeg;base64,...
-
-    const payload = {
+    var payload = {
       id:               Date.now(),
       timestamp:        new Date().toLocaleString('en-PK', { timeZone: 'Asia/Karachi' }),
       course:           currentCourse,
@@ -1145,106 +910,50 @@ function submitEnrollment() {
       screenshotName:   uploadedFile.name,
       screenshotType:   uploadedFile.type,
       screenshotSize:   (uploadedFile.size / 1024).toFixed(0) + ' KB',
-      screenshotBase64: base64,
+      screenshotBase64: ev.target.result,
       status:           'Pending Verification'
     };
-
+ 
     fetch(ENROLLMENT_API, {
       method:  'POST',
       mode:    'no-cors',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify(payload)
     })
-    .then(() => {
+    .then(function() {
       document.getElementById('savingOverlay').classList.remove('show');
       document.getElementById('modalForm').style.display    = 'none';
       document.getElementById('modalSuccess').style.display = 'block';
     })
-    .catch(() => {
-      // no-cors returns opaque response — treat as success
+    .catch(function() {
       document.getElementById('savingOverlay').classList.remove('show');
       document.getElementById('modalForm').style.display    = 'none';
       document.getElementById('modalSuccess').style.display = 'block';
     });
   };
-
   reader.onerror = function() {
     document.getElementById('savingOverlay').classList.remove('show');
     btn.disabled = false;
     btn.innerHTML = 'Confirm My Enrollment';
     alert('Could not read the file. Please try uploading the screenshot again.');
   };
-
-  // ── This triggers the base64 conversion ──
   reader.readAsDataURL(uploadedFile);
 }
-  // Disable + show saving
-  const btn = document.getElementById('submitBtn');
-  btn.disabled = true;
-  btn.innerHTML = '⏳ Submitting...';
-  document.getElementById('savingOverlay').classList.add('show');
  
-  const edu = document.getElementById('fEducation').value.trim();
- 
-  const payload = {
-    id:             Date.now(),
-    timestamp:      new Date().toLocaleString('en-PK', {timeZone:'Asia/Karachi'}),
-    course:         currentCourse,
-    price:          currentPrice,
-    name,
-    age,
-    gender,
-    city,
-    whatsapp:       phone,
-    education:      edu,
-    transactionId:  txn,
-    screenshotName: uploadedFile.name,
-    screenshotSize: (uploadedFile.size / 1024).toFixed(0) + ' KB',
-    status:         'Pending Verification'
-  };
- 
-  fetch(ENROLLMENT_API, {
-    method:  'POST',
-    mode:    'no-cors',
-    headers: {'Content-Type':'application/json'},
-    body:    JSON.stringify(payload)
-  })
-  .then(() => {
-    document.getElementById('savingOverlay').classList.remove('show');
-    document.getElementById('modalForm').style.display    = 'none';
-    document.getElementById('modalSuccess').style.display = 'block';
-  })
-  .catch(() => {
-    // no-cors returns opaque — still show success
-    document.getElementById('savingOverlay').classList.remove('show');
-    document.getElementById('modalForm').style.display    = 'none';
-    document.getElementById('modalSuccess').style.display = 'block';
-  });
-}
- 
-/* ══════════════════════════════════════════
-   ORIENTATION FORM → Google Sheet
-══════════════════════════════════════════ */
+/* ── ORIENTATION → Google Sheet ── */
 function handleOrientation() {
-  const name  = document.getElementById('oriName').value.trim();
-  const phone = document.getElementById('oriPhone').value.trim();
-  const btn   = document.getElementById('oriBtn');
-  const msg   = document.getElementById('oriMsg');
+  var name  = document.getElementById('oriName').value.trim();
+  var phone = document.getElementById('oriPhone').value.trim();
+  var btn   = document.getElementById('oriBtn');
+  var msg   = document.getElementById('oriMsg');
+  var ok    = true;
  
-  // Validate
-  let ok = true;
-  if (name.length < 3) {
-    document.getElementById('oriName').classList.add('err');
-    ok = false;
-  } else {
-    document.getElementById('oriName').classList.remove('err');
-  }
-  if (!validatePhone(phone)) {
-    document.getElementById('oriPhone').classList.add('err');
-    ok = false;
-  } else {
-    document.getElementById('oriPhone').classList.remove('err');
-  }
+  if (name.length < 3) { document.getElementById('oriName').classList.add('err'); ok = false; }
+  else { document.getElementById('oriName').classList.remove('err'); }
+ 
+  if (!validatePhone(phone)) { document.getElementById('oriPhone').classList.add('err'); ok = false; }
+  else { document.getElementById('oriPhone').classList.remove('err'); }
+ 
   if (!ok) {
     msg.style.display = 'block';
     msg.style.color   = '#ff6b6b';
@@ -1255,55 +964,50 @@ function handleOrientation() {
   btn.disabled    = true;
   btn.textContent = 'Sending...';
  
-  const payload = { name, phone };
- 
   fetch(ORIENTATION_API, {
     method:  'POST',
     mode:    'no-cors',
-    headers: {'Content-Type':'application/json'},
-    body:    JSON.stringify(payload)
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify({ name: name, phone: phone })
   })
-  .then(() => {
+  .then(function() {
     btn.textContent = 'Sent ✓';
     msg.style.display = 'block';
     msg.style.color   = '#FAC775';
-    msg.textContent   = '✓ Done! We\'ll WhatsApp you the orientation link within a few hours.';
+    msg.textContent   = "✓ Done! We'll WhatsApp you the orientation link within a few hours.";
     document.getElementById('oriName').disabled  = true;
     document.getElementById('oriPhone').disabled = true;
   })
-  .catch(() => {
+  .catch(function() {
     btn.textContent = 'Sent ✓';
     msg.style.display = 'block';
     msg.style.color   = '#FAC775';
-    msg.textContent   = '✓ Done! We\'ll WhatsApp you the orientation link within a few hours.';
+    msg.textContent   = "✓ Done! We'll WhatsApp you the orientation link within a few hours.";
     document.getElementById('oriName').disabled  = true;
     document.getElementById('oriPhone').disabled = true;
   });
 }
  
-/* ══════════════════════════════════════════
-   NAV & FAQ
-══════════════════════════════════════════ */
+/* ── NAV & FAQ ── */
 function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
  
 function toggleFaq(el) {
-  const item   = el.parentElement;
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  var item   = el.parentElement;
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
   if (!isOpen) item.classList.add('open');
 }
  
-// Nav scroll highlight
-const navAs = document.querySelectorAll('.nav-links a:not(.nav-cta)');
-window.addEventListener('scroll', () => {
-  const y = window.scrollY;
-  navAs.forEach(a => {
-    const href = a.getAttribute('href');
+var navAs = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+window.addEventListener('scroll', function() {
+  var y = window.scrollY;
+  navAs.forEach(function(a) {
+    var href = a.getAttribute('href');
     if (href && href.startsWith('#')) {
-      const s = document.querySelector(href);
+      var s = document.querySelector(href);
       if (s) {
-        const top = s.offsetTop - 100;
-        const inView = y >= top && y < top + s.offsetHeight;
+        var top = s.offsetTop - 100;
+        var inView = y >= top && y < top + s.offsetHeight;
         a.style.color      = inView ? '#042C2A' : '';
         a.style.fontWeight = inView ? '500' : '';
       }
@@ -1311,17 +1015,16 @@ window.addEventListener('scroll', () => {
   });
 });
  
-// Scroll animations
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
+var obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
     if (e.isIntersecting) {
       e.target.style.opacity   = '1';
       e.target.style.transform = 'translateY(0)';
     }
   });
-}, {threshold:0.08});
+}, { threshold: 0.08 });
  
-document.querySelectorAll('.diff-card,.course-card,.step-card,.faq-item,.instructor-card,.payment-card').forEach(el => {
+document.querySelectorAll('.diff-card,.course-card,.step-card,.faq-item,.instructor-card,.payment-card').forEach(function(el) {
   el.style.opacity    = '0';
   el.style.transform  = 'translateY(20px)';
   el.style.transition = 'opacity .5s ease, transform .5s ease';
